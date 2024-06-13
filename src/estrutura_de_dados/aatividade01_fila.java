@@ -24,7 +24,7 @@ public class aatividade01_fila {
 		String tripulante;
 
 		do {
-			System.out.println("1: Adicionar um novo mugiwara no bando: ");
+			System.out.println("1: Adicionar um novo mugiwara ao bando: ");
 			System.out.println("2: Listar todos os mugiwaras do bando: ");
 			System.out.println("3: Chamar (retirar) um mugiwara do bando: ");
 			System.out.println("0: Sair do bando: ");
@@ -49,7 +49,11 @@ public class aatividade01_fila {
 				break;
 			case 3:
 				System.out.println("Retirar um mugiwara do bando:");
-				mugiwara.remove();
+				if (mugiwara.isEmpty()) {
+					System.out.println("O bando está vazio!");
+				} else {
+					System.out.println("Mugiwara retirado: " + mugiwara.remove());
+				}
 				break;
 
 			default:
